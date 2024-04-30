@@ -29,8 +29,8 @@ class OrderCollection extends ResourceCollection
     public function toArray(Request $request)
     {
         return [
+            'pagination' => $this->pagination,
             'items' => $this->collection,
-            'pagination' => $this->pagination
         ];
     }
 }
