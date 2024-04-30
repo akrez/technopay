@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'admin',
             'national_code' => '0010000000',
-            'email' => config('technopay.ADMIN_EMAIL'),
-            'mobile' => config('technopay.ADMIN_MOBILE'),
+            'email' => config('technopay.admin_email'),
+            'mobile' => config('technopay.admin_mobile'),
         ]);
 
         $this->call([

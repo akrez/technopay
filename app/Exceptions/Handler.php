@@ -93,7 +93,7 @@ class Handler extends ExceptionHandler
             json_encode($e->getTrace(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
         );
 
-        User::whereEmail(config('technopay.ADMIN_EMAIL'))->first()
+        User::whereEmail(config('technopay.admin_email'))->first()
             ->notify($ExceptionNotification);
 
         return Response::status($status)
