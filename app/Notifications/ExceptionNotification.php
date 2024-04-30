@@ -27,7 +27,7 @@ class ExceptionNotification extends Notification implements ShouldQueue
      */
     public function via(object $notifiable): array
     {
-        return ['mail',];
+        return ['mail', MelipayamakChannel::class];
     }
 
     /**

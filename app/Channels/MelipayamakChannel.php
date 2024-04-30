@@ -24,8 +24,7 @@ class MelipayamakChannel
         });
 
         $response = Http::get('https://api.payamak-panel.com/post/Send.asmx/SendSimpleSMS', [
-            'message' => $notification->message,
-            'trace' => $notification->trace,
+            'title' => $notification->title,
         ]);
 
         Log::info($response->body());
