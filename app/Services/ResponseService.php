@@ -32,7 +32,7 @@ class ResponseService implements Responsable
 
     public function errors($errors): ResponseService
     {
-        $this->errors = is_array($errors) ? $errors : [$errors];
+        $this->errors = (array)$errors;
         return $this;
     }
 
