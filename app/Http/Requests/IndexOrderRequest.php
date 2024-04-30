@@ -28,7 +28,7 @@ class IndexOrderRequest extends FormRequest
             'mobile' => ['nullable'],
             'min' => ['nullable', 'integer', 'min:0'],
             'max' => ['nullable', 'integer', 'min:0'],
-            'status' => ['nullable', 'string', Rule::in([OrderStatusEnum::ACTIVE, OrderStatusEnum::DEACTIVE,])],
+            'status' => ['nullable', 'string', Rule::in(OrderStatusEnum::values())],
         ];
     }
 }

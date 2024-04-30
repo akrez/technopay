@@ -19,7 +19,7 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'status' => fake()->randomElement([OrderStatusEnum::ACTIVE, OrderStatusEnum::DEACTIVE,]),
+            'status' => fake()->randomElement(OrderStatusEnum::values()),
             'amount' => fake()->numberBetween(0, 999999),
             'user_id' => User::factory()->create(),
         ];
